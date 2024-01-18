@@ -34,7 +34,9 @@ SECRET_KEY = 'django-insecure--i1xpx_emlo%yy%wfj@0g_=j51*2f!av@5u%j!6lh1fzwq&cit
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'poll.domelier.fr',
+]
 
 
 # Application definition
