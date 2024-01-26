@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <!-- {% load tailwind_tags %}
+    {% tailwind_css %} -->
+
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'polls/style.css' %}">
+
+    <title>
+      {% block title %} {% endblock %}
+    </title>
+  </head>
+  <body>
+    <header class="text-red-500">Sondage</header>
+    <section>
+      {% block content %} {% endblock %}
+    </section>
+    {% include "footer.html" %}
+  </body>
+</html>

@@ -23,4 +23,7 @@ urlpatterns = [
     path('datetime', views.current_datetime),
     path('datecourante', views.CurrentDatetimeView.as_view()),
     path('archives/<int:year>/<int:month>/', views.ArchiveView.as_view(), name='archive'),
+    path('question', views.questions_view, name='question'),
+    path('add_question', views.add_question, name='add_question'),
+    path('<int:question_id>/', views.detail, name='detail'),
 ]

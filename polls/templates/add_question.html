@@ -1,0 +1,17 @@
+{# polls/templates/polls/question_detail.html #}
+
+<h1>Question {{ question.id }} :<br>
+  {{ question.question_text }}</h1>
+
+{% if question.choice_set.all %}
+    <form action="/polls/vote/" method="POST">
+        {% for choice in choice_set.all %}
+        <div>
+          <input type="radio" id="{{ choice.choice_text }}" name="vote" value="{{ choice.choice_text }}">
+          <label for="{{ choice.choice_text }}">{{ choice.choice_text }}</label>
+        </div>
+        {% endfor %}
+    </form>
+{% else %}
+    <p>Pas de choix !</p>
+{% endif %}
