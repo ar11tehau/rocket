@@ -12,7 +12,7 @@
     {{ question.question_text }}</h1>
 
   {% if question.choice_set.all %}
-      <form action="/polls/vote/" method="POST">
+      <form action="/vote/" method="POST">
           {% for choice in question.choice_set.all %}
           <div>
             <input type="radio" id="{{ choice.choice_text }}" name="vote" value="{{ choice.choice_text }}">
